@@ -1,0 +1,60 @@
+POST http://localhost:3333/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "hoang anh vinh",
+  "password": "Vinh1011"
+}
+
+###
+
+POST http://localhost:3333/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "hoangvinh22",
+  "password": "hoangvinh"
+}
+
+###
+
+GET  http://localhost:3333/api/auth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+###
+POST  http://localhost:3333/api/todo/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+{
+  "title": "chiều lại đi học",
+  "description": "aaaa",
+  "status": ""
+}
+
+###
+GET http://localhost:3333/api/todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+### 
+PUT  http://localhost:3333/api/todo/62dfa633995513f7ac96bece
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+{
+  "title": "chiều lại đi học chỉnh sửa",
+  "description": "liẹu có thành công không ?",
+  "status": ""
+}
+###
+GET http://localhost:3333/api/todo/62dfa0cb392019b3c6b2858c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+###
+DELETE http://localhost:3333/api/todo/62dfa155392019b3c6b28591
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+
+### 
+POST http://localhost:3333/api/upload/single
+Content-Type: multipart/form-data
