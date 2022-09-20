@@ -5,7 +5,6 @@ const uploadFileRouter = require('./upload.routes')
 
 const AppRouter = express()
 
-// Định tuyến lên router có key fix là /todo và gọi tới todoRouter
 AppRouter.use('/todo', todoRouter)
 AppRouter.use('/auth', authRouter)
 AppRouter.use('/upload', uploadFileRouter)
