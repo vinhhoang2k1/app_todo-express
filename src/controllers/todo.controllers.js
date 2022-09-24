@@ -59,7 +59,7 @@ TodoController.createTodo = async (req, res) => {
             updatedTodo = await Todo.findOneAndUpdate(
                 todoUpdateCondition,
                 updatedTodo,
-                // { new: true }
+                { new: true }
             )
             if (!updatedTodo)
                 return res.status(401).json({
@@ -90,7 +90,7 @@ TodoController.createTodo = async (req, res) => {
                     todo: deleteTodo
                 })
         } catch (error) {
-            
+
         }
     }
 

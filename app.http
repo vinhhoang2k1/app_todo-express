@@ -25,12 +25,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmO
 ###
 POST  http://localhost:3333/api/todo/create
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NjM5OTEwMTN9.rYV59xQSWR1eg47OcnxsNG2YCoSqG42jLUpOLfKUpYI
 
 {
   "title": "chiều lại đi học",
   "description": "aaaa",
-  "status": ""
+  "status": "TO LEARN"
 }
 
 ###
@@ -40,7 +40,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmO
 ### 
 PUT  http://localhost:3333/api/todo/62dfa633995513f7ac96bece
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NTg4MjEwOTZ9.eUtXNf8QbRgiQNJWwINDA2tKWjpjWQmzqykd4wtcr5A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRmOTc0MTU2M2ViZmEwNzdiZDljNzAiLCJpYXQiOjE2NjM5OTEwMTN9.rYV59xQSWR1eg47OcnxsNG2YCoSqG42jLUpOLfKUpYI
 
 {
   "title": "chiều lại đi học chỉnh sửa",

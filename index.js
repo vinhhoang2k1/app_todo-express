@@ -7,7 +7,7 @@ const ConnectDB = require('./src/configs/database.configs')
 const apiRouter = require('./src/routes/router')
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
-const options = {
+const optionsDoc = {
     definition: {
         openapi: "3.0.3",
         info: {
@@ -17,10 +17,12 @@ const options = {
         },
         components: {
             securitySchemes: {
-                BearerAuth: {
+                bearerAuth: {
                     type: "http",
                     scheme: "bearer",
-                    bearerFormat: "JWT"
+                    name: "Authorization",
+                    bearerFormat: "JWT",
+                    in: "header"
                 }
             }
         },
@@ -38,15 +40,19 @@ const options = {
     //   apis: ["./routes/*.js"]
     apis: ["./src/routes/*.js"]
 }
-
+var options = {
+    swaggerOptions: {
+        persistAuthorization: true
+    }
+};
 dotenv.config()
 ConnectDB()
 const port = process.env.PORT || 3333;
 const isProduction = process.env.NODE_ENV === "production";
-const specs = swaggerJsDoc(options);
+const specs = swaggerJsDoc(optionsDoc);
 const App = express()
 
-App.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+App.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs, options));
 App.use(
     isProduction ? morgan("combined", { stream: accessLogStream }) : morgan("dev")
 );

@@ -39,17 +39,17 @@ const verifyToken = require('../middleware/auth.middleware')
  * @swagger
  * /api/auth:
  *   get:
- *     summary: Lấy danh sách người dùng
+ *     summary: Lấy thông tin người dùng
  *     tags: [Authentication]
  *     security: 
- *          bearerAuth: []
+ *         - bearerAuth: []
  *     responses:
  *       200:
  *         description: 
  *         content:
  *           application/json:
  *             schema:
- *               type: array
+ *               type: object
  *               items:
  *                 $ref: '#/components/schemas/Authentication'
  */
